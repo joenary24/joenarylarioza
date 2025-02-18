@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>August 21 - Ninoy Aquino Day</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #2c3e50, #000000);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .background-glow {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 204, 0, 0.3) 10%, transparent 50%);
+            animation: moveGlow 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes moveGlow {
+            from {
+                transform: translate(-20%, -20%);
+            }
+            to {
+                transform: translate(20%, 20%);
+            }
+        }
+
+        /* Main Content Box */
+        .container {
+            width: 70%;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-out forwards;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            color: #ffcc00;
+            font-size: 36px;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            color: #ddd;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 22px;
+            color: #ffcc00;
+            margin: 20px 0;
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #ffcc00;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: transform 0.3s, background 0.3s;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 1.5s ease-out forwards 1s;
+        }
+
+        a:hover {
+            background-color: #ff9900;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ffcc00;
+            }
+            to {
+                text-shadow: 0 0 20px #ffcc00, 0 0 30px #ff9900;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Glowing Effect -->
+    <div class="background-glow"></div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>August 21 - Ninoy Aquino Day</h1>
+        
+        <p class="quote">"The Filipino is worth dying for." - <strong>Benigno "Ninoy" Aquino Jr.</strong></p>
+
+        <p>On this day, we remember the courage and sacrifice of Ninoy Aquino, who gave his life for the freedom of the Filipino people. His assassination on August 21, 1983, at the Manila International Airport (now Ninoy Aquino International Airport) ignited a movement that changed the course of history.</p>
+
+        <p class="highlight">His death awakened a nation, leading to the People Power Revolution of 1986, which restored democracy in the Philippines.</p>
+
+        <p>Let us honor his memory by standing up for truth, justice, and democracy—principles he fought for until his last breath.</p>
+
+        <p><a href="calendar.html">Back to Calendar</a></p>
+    </div>
+
+</body>
+</html>

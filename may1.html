@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 1 - Labor Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            text-align: center;
+            color: white;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container {
+            width: 70%;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+        }
+        h1 {
+            font-size: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-family: 'Montserrat', sans-serif;
+            animation: textGlow 2s infinite alternate;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 28px;
+            background-color: #e74c3c;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.5);
+            transition: transform 0.3s, background 0.3s;
+        }
+        a:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+        .symbol {
+            font-size: 80px;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes textGlow {
+            from { text-shadow: 0 0 15px rgba(255, 255, 255, 0.6); }
+            to { text-shadow: 0 0 30px rgba(255, 255, 255, 1); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>May 1 - Labor Day (Araw ng Manggagawa)</h1>
+        <div class="symbol">⚒️</div>
+        <p>Labor Day, celebrated on May 1, is a national holiday in the Philippines that recognizes the contributions of workers to the country's development. It is also known as Araw ng Manggagawa.</p>
+        <p>Labor Day is often marked by rallies, protests, and celebrations organized by labor unions, advocating for workers' rights, fair wages, and better working conditions. The holiday is also an opportunity for employees to take a well-deserved break and spend time with their families.</p>
+        <p><a href="calendar.html">Back to Calendar</a></p>
+    </div>
+</body>
+</html>

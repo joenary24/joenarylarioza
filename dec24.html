@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>December 24 - Christmas Eve</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #b30000, #ff4d4d); /* Red to light red gradient */
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            width: 70%;
+            margin: 80px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #ddd;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 25px;
+            background: #FFD700; 
+            color: #1B263B;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+            animation: fadeIn 2.5s ease-out;
+        }
+
+        a:hover {
+            background: #E6B800; 
+            box-shadow: 0 6px 15px rgba(255, 215, 0, 0.8);
+            transform: scale(1.05);
+        }
+
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #fff;
+            font-size: 1em;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="snowflakes">
+    </div>
+
+    <div class="container">
+        <h1>🎄 December 24 - Christmas Eve 🎄</h1>
+        <p><span class="highlight">Christmas Eve</span> is one of the most significant celebrations in the <strong>Philippines</strong>, marking the night before <strong>Christmas Day</strong>.</p>
+
+        <p>Filipino families gather for <strong>Noche Buena</strong>, a festive midnight feast featuring traditional dishes such as <strong>lechon (roast pig), hamon (Christmas ham), queso de bola (edam cheese),</strong> and <strong>bibingka</strong> (rice cake).</p>
+
+        <p>Many Filipinos also attend <strong>Misa de Gallo</strong>, a midnight mass that commemorates the birth of <strong>Jesus Christ</strong>.</p>
+
+        <p><a href="calendar.html">Back to Calendar</a></p>
+    </div>
+
+    <script>
+        function createSnowflakes() {
+            const snowflakesContainer = document.querySelector('.snowflakes');
+            const numberOfSnowflakes = 50;
+
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❄';
+                snowflake.style.left = `${Math.random() * 100}vw`; 
+                snowflake.style.animationDuration = `${Math.random() * 5 + 3}s`; 
+                snowflake.style.animationDelay = `${Math.random() * 5}s`; 
+                snowflake.style.fontSize = `${Math.random() * 0.5 + 1.5}em`;
+                snowflakesContainer.appendChild(snowflake);
+            }
+        }
+
+        createSnowflakes();
+    </script>
+</body>
+</html>

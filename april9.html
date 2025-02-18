@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>April 9 - Araw ng Kagitingan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #0033A0, #BF0D3E);
+            text-align: center;
+            color: #f4f4f4;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 70%;
+            margin: 60px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .container:hover {
+            transform: scale(1.03);
+        }
+        .wave {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: linear-gradient(90deg, #FFD700, #DAA520);
+            border-radius: 12px 12px 0 0;
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 34px;
+            color: #DAA520;
+            font-weight: 700;
+            margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.7s forwards;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #BF0D3E;
+        }
+        .hero-text {
+            color: #0033A0;
+            font-weight: 700;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.9s forwards;
+        }
+        a {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background: #DAA520;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 6px;
+            transition: 0.3s;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.2s forwards;
+        }
+        a:hover {
+            background: #B8860B;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="wave"></div>
+        <h1>April 9 - Araw ng Kagitingan (Day of Valor)</h1>
+        <p><span class="highlight">Araw ng Kagitingan</span> is observed every <strong>April 9</strong> to honor the <strong>bravery and sacrifice</strong> of Filipino and American soldiers during <strong>World War II</strong>.</p>
+        <p>This day commemorates the <strong>Bataan Death March</strong>, where thousands of soldiers were forced to march over <strong>100 kilometers</strong> under extreme conditions.</p>
+        <p class="hero-text">"Ang dugong dumanak noon ay dugong bumuhay sa kalayaan natin ngayon."</p>
+        <a href="calendar.html">Back to Calendar</a>
+    </div>
+
+</body>
+</html>

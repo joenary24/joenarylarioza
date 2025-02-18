@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Saturday - April 19</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #1E1E3F, #0D0D1A);
+            color: #f4f4f4;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        @keyframes flicker {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        .candle {
+            position: absolute;
+            width: 10px;
+            height: 40px;
+            background: #E0C065;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+        }
+        
+        .candle::before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            background: #FFA500;
+            border-radius: 50%;
+            top: -15px;
+            left: 0;
+            animation: flicker 2s infinite alternate;
+        }
+        
+        .container {
+            width: 65%;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #E0C065;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f8f8f8;
+            margin: 20px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #E0C065;
+        }
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 25px;
+            background: #E0C065;
+            color: #2A2A50;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        a:hover {
+            background: #CFAC4A;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+        .image-container {
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="candle"></div>
+    <div class="container">
+        <h1>Black Saturday - April 19</h1>
+        <div class="image-container">
+        </div>
+        <p><span class="highlight">Black Saturday</span> is a solemn day in the <span class="highlight">Christian calendar</span> that commemorates the time <span class="highlight">Jesus Christ lay in the tomb</span> after His crucifixion.</p>
+        <p>On this sacred occasion, Christians observe <span class="highlight">prayer vigils, fasting, and silence</span>, preparing for the joy of Easter Sunday.</p>
+        <a href="calendar.html">Back to Calendar</a>
+    </div>
+</body>
+</html>

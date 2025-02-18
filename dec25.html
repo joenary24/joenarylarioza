@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>December 25 - Christmas Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #3E9E6A, #0C3B2E);
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 60%;
+            margin: 80px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #FF6347;
+            text-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards 0.5s;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #ddd;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #FF6347;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 25px;
+            background: #FF6347;
+            color: #1B263B;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(255, 99, 71, 0.5);
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards 1s;
+        }
+
+        a:hover {
+            background: #E54B43;
+            box-shadow: 0 6px 15px rgba(255, 99, 71, 0.8);
+        }
+
+        /* Snowflakes effect */
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #fff;
+            font-size: 1em;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="snowflakes">
+        <!-- Snowflakes will be created dynamically using JavaScript -->
+    </div>
+
+    <div class="container">
+        <h1>🎄 December 25 - Christmas Day 🎄</h1>
+        <p><span class="highlight">December 25th</span> marks the celebration of the birth of <strong>Jesus Christ</strong>, a joyous occasion celebrated by millions around the world. It’s a time for family gatherings, sharing love, and spreading happiness.</p>
+        <p>Christmas is all about tradition—exchanging gifts, enjoying delicious food, and basking in the warmth of the holiday spirit. In the Philippines, the Christmas season starts early, with the "Simbang Gabi" masses and the famous "Parol" (Christmas lanterns) lighting up homes.</p>
+        <p>The season also symbolizes hope, renewal, and goodwill to all. It’s a time to reflect on the year gone by and to welcome the new year with love and gratitude.</p>
+        <a href="calendar.html">Back to Calendar</a>
+    </div>
+
+    <script>
+        // Function to create snowflakes
+        function createSnowflakes() {
+            const snowflakesContainer = document.querySelector('.snowflakes');
+            const numberOfSnowflakes = 50;
+
+            for (let i = 0; i < numberOfSnowflakes; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❄';
+                snowflake.style.left = `${Math.random() * 100}vw`;
+                snowflake.style.animationDuration = `${Math.random() * 5 + 3}s`;
+                snowflake.style.animationDelay = `${Math.random() * 5}s`;
+                snowflake.style.fontSize = `${Math.random() * 0.5 + 1.5}em`;
+                snowflakesContainer.appendChild(snowflake);
+            }
+        }
+
+        createSnowflakes();
+    </script>
+</body>
+</html>

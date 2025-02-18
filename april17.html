@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maundy Thursday - April 17</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #40376E, #2A2A50);
+            color: #f4f4f4;
+            text-align: center;
+            overflow-x: hidden;
+            animation: backgroundAnimation 10s infinite alternate;
+            position: relative;
+        }
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(135deg, #40376E, #2A2A50); }
+            50% { background: linear-gradient(135deg, #2A2A50, #1E1E3F); }
+            100% { background: linear-gradient(135deg, #40376E, #2A2A50); }
+        }
+        .container {
+            width: 65%;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #E0C065;
+            margin-bottom: 15px;
+            animation: slideDown 1.5s ease-in-out;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f8f8f8;
+            margin: 20px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #E0C065;
+        }
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 25px;
+            background: #E0C065;
+            color: #2A2A50;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 2s ease-in-out;
+        }
+        a:hover {
+            background: #CFAC4A;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 1; }
+        }
+        .twinkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #E0C065;
+            border-radius: 50%;
+            animation: twinkle 3s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Maundy Thursday - April 17</h1>
+        <p><span class="highlight">Maundy Thursday</span>, also known as <span class="highlight">Holy Thursday</span>, is a solemn day in the <span class="highlight">Christian calendar</span> that commemorates the <span class="highlight">Last Supper</span> of Jesus Christ with His disciples.</p>
+        <p>On this sacred occasion, Christians reflect on the institution of the <span class="highlight">Eucharist</span> and Jesus’ commandment to love one another. Many observe this day with <span class="highlight">prayers, fasting, and Visita Iglesia (church visits).</span></p>
+        <a href="calendar.html">Back to Calendar</a>
+    </div>
+</body>
+</html>

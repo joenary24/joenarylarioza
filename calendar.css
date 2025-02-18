@@ -1,0 +1,300 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(180deg, #f0f8ff, #fbe4d8, #f7a399);
+    background-attachment: fixed;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 100vh;
+    position: relative;
+    color: #444;
+    animation: fadeInBackground 1.5s ease-in-out;
+}
+
+@keyframes fadeInBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ffe5d9; 
+    animation: slideInContainer 1.2s ease-in-out;
+}
+
+@keyframes slideInContainer {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 182, 160, 0.2);
+    border-radius: 50%;
+    z-index: -1;
+    animation: floatShape 10s ease-in-out infinite;
+}
+
+@keyframes floatShape {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-20px, 20px); }
+    100% { transform: translate(0, 0); }
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    margin: 0 auto 20px;
+    margin-top: 50px;
+    font-family: 'Playfair Display', serif;
+    color: #ffb6a0;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #ffb6a0; 
+    padding-bottom: 10px;
+    animation: bounceIn 1s ease-in-out;
+    font-weight: 700;
+    transition: text-shadow 0.3s;
+}
+
+h1:hover {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.95); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+h2 {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Playfair Display', serif;
+    color: #ffb6a0;
+    width: 100%;
+    letter-spacing: 1px;
+    border-top: 2px solid #ffb6a0;
+    padding-top: 10px;
+    animation: fadeIn 1.2s ease-in-out;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    max-width: 400px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    background: #faf8f5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    margin: 15px auto;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    border: 1px solid #ffe5d9;
+    border-radius: 12px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+table:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.month-title {
+    position: relative; 
+    background: #ffb6a0; 
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    font-family: 'Cormorant Garamond', serif;
+    border-radius: 8px;
+    animation: fadeIn 1.2s ease-in-out, gradientShift 6s ease infinite;
+    background-size: 200% 200%;
+    overflow: hidden;
+}
+
+.month-title::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 4px;
+    margin: 10px auto 0;
+    background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(0,0,0,0.2));
+    border-radius: 2px;
+    animation: underlinePulse 3s ease-in-out infinite;
+}
+
+@keyframes underlinePulse {
+    0%, 100% { opacity: 0.8; transform: scaleX(1); }
+    50% { opacity: 1; transform: scaleX(1.1); }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.month-title::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    animation: rotateIcon 4s linear infinite;
+}
+
+@keyframes rotateIcon {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+th {
+    background: #ffe5d9;
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    transition: background 0.3s, transform 0.3s;
+}
+
+th:hover {
+    background: #ffdac0;
+    transform: translateY(-1px);
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    color: #444;
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #ffe5d9;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+
+td:hover {
+    background: #fff5ef;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+td.weekend {
+    background: #f7efe8;
+    color: #444;
+    border: 1px solid #ffcec2;
+    transition: background 0.3s, transform 0.3s;
+}
+
+td.weekend:hover {
+    background: #fceae6;
+    transform: translateY(-2px) scale(1.02);
+}
+
+td.holiday {
+    background: #ff9a8d;
+    color: #ffffff;
+    border: 1px solid #ff8a80;
+    animation: softGlow 2s infinite alternate;
+}
+
+@keyframes softGlow {
+    0% { box-shadow: 0 0 6px rgba(255,154,141,0.3); }
+    100% { box-shadow: 0 0 10px rgba(255,154,141,0.6); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.month-title.january {
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.month-title.february {
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.month-title.march {
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+}
+
+.month-title.april {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+.month-title.may {
+    background: linear-gradient(135deg, #fff1eb, #ace0f9);
+}
+
+.month-title.june {
+    background: linear-gradient(135deg, #ff9a8d, #ffdde1);
+}
+
+.month-title.july {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.month-title.august {
+    background: linear-gradient(135deg, #fdcbf1, #e6dee9);
+}
+
+.month-title.september {
+    background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+}
+
+.month-title.october {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+}
+
+.month-title.november {
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+}
+
+.month-title.december {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+}

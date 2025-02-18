@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>December 8 - Feast of the Immaculate Conception</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f0f5f5;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 70%;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #004080;
+            text-shadow: 0 0 15px rgba(0, 64, 128, 0.8);
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #004080;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 25px;
+            background: #004080;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 64, 128, 0.5);
+        }
+
+        a:hover {
+            background: #003366;
+            box-shadow: 0 6px 15px rgba(0, 64, 128, 0.7);
+        }
+
+        /* Animation for particles in the background */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #004080;
+            animation: float 10s infinite;
+        }
+
+        @keyframes float {
+            0% {
+                top: -10px;
+                left: random(0, 100%);
+                opacity: 1;
+            }
+            100% {
+                top: 100%;
+                left: random(0, 100%);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Particle effect -->
+    <div class="particles">
+        <!-- Creating multiple particle divs to animate -->
+        <div class="particle" style="width: 5px; height: 5px; animation-duration: 12s;"></div>
+        <div class="particle" style="width: 8px; height: 8px; animation-duration: 10s;"></div>
+        <div class="particle" style="width: 6px; height: 6px; animation-duration: 14s;"></div>
+        <div class="particle" style="width: 7px; height: 7px; animation-duration: 13s;"></div>
+        <div class="particle" style="width: 4px; height: 4px; animation-duration: 9s;"></div>
+    </div>
+
+    <div class="container">
+        <h1>🌟 December 8 - Feast of the Immaculate Conception 🌟</h1>
+        <p>The <span class="highlight">Feast of the Immaculate Conception</span> is a special non-working holiday in the Philippines, celebrated every <span class="highlight">December 8</span>.</p>
+
+        <p>This feast honors the belief that the <span class="highlight">Blessed Virgin Mary</span> was conceived without original sin, a doctrine that holds great importance in the Catholic faith.</p>
+
+        <p>The day is marked by <span class="highlight">masses, processions, and prayers</span> at many churches, especially those dedicated to Our Lady of the Immaculate Conception. It’s a day of reverence and devotion, celebrating Mary’s purity and grace.</p>
+
+        <p><a href="calendar.html">Back to Calendar</a></p>
+    </div>
+
+</body>
+</html>

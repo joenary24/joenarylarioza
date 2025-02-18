@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonifacio Day - November 30</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;500&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: url('https://upload.wikimedia.org/wikipedia/commons/6/6d/Bonifacio_Monument.jpg') center/cover no-repeat;
+            padding: 100px 20px;
+            animation: fadeSlide 2s ease-in-out;
+        }
+
+        .header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 50px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #FFD700;
+            text-shadow: 0px 0px 20px rgba(255, 215, 0, 0.9);
+            animation: pulse 2s infinite alternate;
+        }
+
+        @keyframes fadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            from {
+                text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
+            }
+            to {
+                text-shadow: 0px 0px 30px rgba(255, 215, 0, 1);
+            }
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(255, 0, 0, 0.3);
+            animation: zoomIn 1s ease-in-out;
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .quote {
+            font-size: 22px;
+            font-weight: bold;
+            color: #FFD700;
+            border-left: 5px solid #FFD700;
+            padding-left: 15px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .divider {
+            width: 100px;
+            height: 5px;
+            background-color: #FFD700;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 30px;
+            background-color: #8B0000;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 12px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #a00000;
+            transform: scale(1.15);
+        }
+
+        .flag {
+            width: 100%;
+            height: 120px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/b/b0/Flag_of_the_Philippines.svg') center/cover no-repeat;
+            animation: waveMotion 4s infinite ease-in-out;
+            margin-top: 50px;
+        }
+
+        @keyframes waveMotion {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>November 30 - Bonifacio Day</h1>
+    </div>
+
+    <div class="container">
+        <p class="quote">"Walang ibang bansang magpapalaya sa atin kundi ang ating sariling bayan!"</p>
+        <div class="divider"></div>
+        
+        <p><strong>Bonifacio Day</strong> honors the courage and patriotism of <strong>Andrés Bonifacio</strong>, founder of the <strong>Katipunan</strong>, who fought for freedom and justice for the Filipino people.</p>
+
+        <p>It is a day of remembrance for his leadership and sacrifice, celebrated through ceremonies and tributes across the country.</p>
+
+        <p><a href="calendar.html">Back to Calendar</a></p>
+    </div>
+
+    <div class="flag"></div>
+</body>
+</html>

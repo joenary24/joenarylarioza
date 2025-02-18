@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Friday - April 18</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #2A2A50, #1E1E3F);
+            color: #f4f4f4;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        @keyframes fadingLight {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        .cross {
+            position: absolute;
+            width: 10px;
+            height: 60px;
+            background: #E0C065;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+            animation: fadingLight 3s infinite alternate;
+        }
+        
+        .cross::before {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 10px;
+            background: #E0C065;
+            top: 25px;
+            left: -15px;
+        }
+        
+        .container {
+            width: 65%;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #E0C065;
+            margin-bottom: 15px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f8f8f8;
+            margin: 20px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #E0C065;
+        }
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 25px;
+            background: #E0C065;
+            color: #2A2A50;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        a:hover {
+            background: #CFAC4A;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+        .image-container {
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .image-container img {
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="cross"></div>
+    <div class="container">
+        <h1>Good Friday - April 18</h1>
+        <div class="image-container">
+        </div>
+        <p><span class="highlight">Good Friday</span> is a solemn day in the <span class="highlight">Christian calendar</span> that commemorates the <span class="highlight">crucifixion of Jesus Christ</span> and His death at Calvary.</p>
+        <p>On this sacred occasion, Christians observe <span class="highlight">fasting, prayers, and the Way of the Cross</span>, reflecting on Jesus’ ultimate sacrifice for humanity.</p>
+        <a href="calendar.html">Back to Calendar</a>
+    </div>
+</body>
+</html>

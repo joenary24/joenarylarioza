@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>June 12 - Philippine Independence Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #003366, #D40000);
+            color: #f4f4f4;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .flag {
+            position: absolute;
+            width: 150px;
+            height: 100px;
+            background: linear-gradient(to bottom, #003366 50%, #D40000 50%);
+            border: 2px solid white;
+            left: 50%;
+            top: 10%;
+            transform: translateX(-50%);
+            animation: wave 2s infinite ease-in-out;
+        }
+        
+        .sun {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #E6B800;
+            border-radius: 50%;
+            left: 50%;
+            top: 15%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(230, 184, 0, 0.8);
+        }
+        
+        .container {
+            width: 65%;
+            margin: 50px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            color: #E6B800;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #f8f8f8;
+            margin: 20px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #E6B800;
+        }
+        a {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 25px;
+            background: #003366;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s ease-in-out;
+        }
+        a:hover {
+            background: #002147;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="flag"></div>
+    <div class="sun"></div>
+    <div class="container">
+        <h1>June 12 - Philippine Independence Day</h1>
+        <p><span class="highlight">Independence Day</span> is celebrated on <span class="highlight">June 12</span> and marks the <span class="highlight">declaration of independence from Spanish rule</span> on <span class="highlight">June 12, 1898</span>, led by <span class="highlight">General Emilio Aguinaldo</span> in Kawit, Cavite.</p>
+        <p>Filipinos honor this day with <span class="highlight">flag-raising ceremonies, parades, and cultural events</span>, reflecting on the nation’s freedom and history.</p>
+        <a href="calendar.html">Back to Calendar</a>
+    </div>
+</body>
+</html>
